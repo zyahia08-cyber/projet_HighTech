@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body class="container">
+    <header>
+        <div><span class="btn btn1">HTS</span>HighTechStore</div>
+        <div>
+            <a class="btn btn2" href="../index.html">Accueil</a>
+            <a class="btn btn2" href="pc.html">Pc</a>
+            <a class="btn btn1" href="inscription.html">Inscription</a>
+            <a class="btn btn2" href="infos.html">Infos</a>
+        </div>
+    </header>
+    <main class="card" >
+        <h1>Formulaire d'Inscription</h1>
+        <form action="#" method="post">
+            <div class="formulaire">
+                <div>
+                    <label for="nom">Nom:</label></br>
+                    <input type="text" id="nom" name="nom" /></br>
+                    <label for="sexe">sexe:</label></br>
+                    <div class="grp-radio">
+                    
+                    <input type="radio" id="Masculin" name="sexe" value="Masculin" />
+                    <label for="Masculin">Masculin</label>
+                    <input type="radio" id="Féminin" name="sexe" value="Féminin" />
+                    <label for="Féminin">Féminin</label></div>
+
+                    <label for="ville">Ville:</label></br>
+                    <input type="text" id="ville" name="ville" /></br>
+
+                    <label for="mail">Adresse E-mail:</label></br>
+                    <input type="email" id="mail" name="mail"  placeholder="nom@exemple.com" />
+                </div>
+                <div>
+                    <label for="Prénom">Prénom:</label></br>
+                    <input type="text" id="Prénom" name="Prénom" /></br>
+
+                    <label for="adresse">Adresse :</label><br/>
+                    <input id="adresse" name="adresse" /></br>
+
+                    <label for="Gouvernorat">Gouvernerat :</label></br>
+                    <select id="Gouvernorat" name="Gouvernorat">
+                        <option value="">--Choisir un gouvernorat--</option>
+                        <option value="Gouvernorat de Manouba">Gouvernorat de Manouba</option>
+                        <option value="Gouvernorat de Tunis">Gouvernorat de Tunis</option>
+                        <option value="Gouvernorat de Sousse">Gouvernorat de Sousse</option>
+                    </select></br>
+
+                    <label for="tel">Numéro de téléphone :</label></br>
+                    <input type="text" id="tel" name="tel" />
+                </div>
+                <div>
+                    <label for="date">Date de naissance :</label></br>
+                    <input type="date" id="date" name="date" /></br>
+
+                    <label for="code">Code postal:</label></br>
+                    <input type="text" id="code" name="code" /></br>
+
+                    <label for="fonction">Fonction:</label></br>
+                    <input type="text" id="fonction" name="fonction" />
+                </div>
+            </div>
+            <label for="remarque">Remarques:</label></br>
+            <textarea type="text" id="remarque" name="remarque" placeholder="Vos remarques ou précisions ..." rows="4"  ></textarea>
+            <button type="submit" class="btn btn1">Valider l'inscription</button>
+        </form>
+    </main>
+    <footer>
+      <p>2026 HighTechStore - Tous droits réservés | Auteur : Votre nom et prénom</p>  
+    </footer>
+</body>
+</html>

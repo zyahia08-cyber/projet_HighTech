@@ -1,0 +1,166 @@
+:root { 
+    /* Couleurs principales & Thème */ 
+    --primary-color: #007bff;  /* Bleu principal(Boutons,Liens au survol, bordures)*/ 
+    --primary-hover: #0056b3;        /* Bleu foncé (Effet survol bouton/lien) */ 
+    --dark-header: #1a252f;        /* Fond En-tête, Pied de page, Titre tableau */ 
+    --dark-nav: #2c3e50;             /* Fond des boutons du menu de navigation */ 
+    --dark-sub-header: #34495e;      /* Sous-titres du tableau des horaires */ 
+     
+    /* Couleurs de fond */
+     --bg-body: #f4f6f9;              /* Fond général de la page */ 
+     --bg-card: #ffffff;              /* Fond des cartes / conteneurs */ 
+     --bg-search: #e9ecef;            /* Fond de la barre de recherche */ 
+     --bg-placeholder: #e2e8f0;       /* Fond des emplacements d'images */ 
+     
+    /* Couleurs de texte */
+     --text-primary: #333333;         /* Couleur de texte principal */ 
+     --text-muted: #4a5568;           /* Texte de définition / secondaire */ 
+     --text-light: #ffffff;           /* Texte clair sur fond sombre */ 
+     --text-placeholder: #64748b;     /* Texte des images d'illustration */ 
+     --text-price: #d9534f;           /* Rouge pour l'affichage des prix */ 
+     
+    /* Couleurs de bordures */ 
+    --border-color: #dddddd;         /* Bordures des cartes */ 
+    --border-table: #cccccc;         /* Bordures des tableaux */ 
+    --border-placeholder: #cbd5e1;   /* Bordures des espaces images */
+}
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+    width: 100%;
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+aside,main,nav{
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding:0 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark-header);
+    color: var(--text-light);
+    padding: 15px 30px;
+}
+h1 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-header);
+    color: var(--text-light);
+}
+.card{
+    background-color:var(--bg-card) ;
+    padding: 10px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.formulaire{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 20px;
+}
+input, select, textarea { 
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+label{
+     font-weight: bold;
+     font-size: 0.85rem;
+}
+.grp-radio label {
+     font-weight: normal;
+
+}
+.grp-radio{
+    display: flex;
+     align-items: center;
+     gap: 10px;
+}
+.btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn1{
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.btn2{
+    background-color: var(--dark-nav);
+    color: var(--text-light);
+}
+
+table,tr,td{
+    border: 2px solid var(--border-table);
+    padding: 10px;
+}
+table {
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+caption{
+    text-align: center;
+    background-color: var(--dark-header);
+    color: var(--text-light);
+    padding: 10px;
+}
+.tab{
+    background-color: var(--dark-sub-header);
+    color: var(--text-light);
+}
+dt{
+    border-left: 2px solid var(--primary-color);
+    padding-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    header{
+        justify-content: left;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .formulaire{
+        grid-template-columns: 1fr;
+    }
+    footer{
+        font-size: 0.75rem;
+    }
+    body{
+        padding: 0 20px;
+    }
+
+}
